@@ -27,7 +27,13 @@ color: #000;
 
 /* Style social buttons */
 
+.navbar-brand2{
+ width:15ex;
+ padding:none;
+ border:none;
+ height:-20ex;
 
+}
 
 
 #Grass{
@@ -45,8 +51,12 @@ opacity: 0.2;
 
 /*Style Front page*/
 #OdinIm{
+	min-width:30ex;
+	min-height:30ex;
 	 position:absolute;
-  left:40%;
+padding:none;
+border:none;
+   left: 50%;
 border-radius:50%;
-  top:35%;
+  top:25ex;
   }
