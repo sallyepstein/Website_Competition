@@ -28,12 +28,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#"><img src="BunnyLogo_alpha.jpg";></a>
+      <a class="navbar-brand" href="#"><img class="navbar-brand2" src="BunnyLogo_alpha.jpg";></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li> <a href='Index.html'> Home </a></li>
-        <li><a href="About.html"> About</a></li>
+        <li><a href='About.html'> About</a></li>
         <li><a href='Search.html'> Search</a></li>
       </ul>
     </div>
@@ -43,9 +43,11 @@
 
 <!-- Start Content -->
 
+<p> Find rabbits in your area  </p>
 
 <!-- Placeholder for map-->
 <div id="map"></div>
+
 
 
 
@@ -86,54 +88,82 @@ marker4.setMap(map);
 
 
 // Pop up window bunny 1
-var contentString = '<div id="content">'+
+var contentString1 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Lady Bunny</h1>'+
-      '<img src="images/Rabbit1.jpeg" alt="Lady Bunny" height="115" width="115">'+
+      '<h1 id="firstHeading" class="firstHeading">Velveteen</h1>'+
+      '<img src="images/Rabbit1.jpeg" alt="Velveteen" height="115" width="115">'+
       '<p> Likes walks in parks      </p> '+
       '</div>'+
       '</div>';
 
  marker1.addListener('click', function() {
-    infowindow.open(map, marker1);
+    infowindow1.open(map, marker1);
   });
 
- // Pop up window bunny 2
-var contentString = '<div id="content">'+
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+  });
+
+
+
+var contentString2 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Lady Bunny</h1>'+
-      '<img src="images/Rabbit2.jpeg" alt="Lady Bunny" height="115" width="115">'+
+      '<h1 id="firstHeading" class="firstHeading">Sunny</h1>'+
+      '<img src="images/Rabbit2.jpeg" alt="Velveteen" height="115" width="115">'+
       '<p> Likes walks in parks      </p> '+
       '</div>'+
       '</div>';
 
- marker1.addListener('click', function() {
-    infowindow.open(map, marker1);
+ marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });
+ var infowindow2 = new google.maps.InfoWindow({
+    content: contentString2
   });
 
- // Pop up window bunny 3
-var contentString = '<div id="content">'+
+ var contentString3 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Lady Bunny</h1>'+
-      '<img src="images/3.jpeg" alt="Lady Bunny" height="115" width="115">'+
-      '<p> Likes walks in parks      </p> '+
+      '<h1 id="firstHeading" class="firstHeading">Minnie</h1>'+
+      '<img src="images/Rabbit3.jpeg" alt="Velveteen" height="115" width="115">'+
+      '<p> Likes brocolli      </p> '+
       '</div>'+
       '</div>';
-
-var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
 
  marker3.addListener('click', function() {
-    infowindow.open(map, marker3);
+    infowindow3.open(map, marker3);
   });
+var infowindow3 = new google.maps.InfoWindow({
+    content: contentString3
+  });
+
+ var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Suzie</h1>'+
+      '<img src="images/Rabbit4.jpeg" alt="Velveteen" height="115" width="115">'+
+      '<p> Likes rain       </p> '+
+      '</div>'+
+      '</div>';
+
+ marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+  });
+
+
+
+
+var infowindow4 = new google.maps.InfoWindow({
+    content: contentString4
+  });
+
+
 
 }
 </script>
-<p> Find rabbits in your area  </p>
 
 
 
