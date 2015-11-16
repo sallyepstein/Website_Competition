@@ -14,7 +14,13 @@
 <style type="text/css">
   html, body { height: 100%; margin: 0; padding: 0; }
   #map { height: 400px;
-         width:500px;}
+         width:100%;}
+
+
+
+</style>
+<style type="text/css">
+div#map { margin: 0 auto 0 auto; }
 </style>
 </head>
 <body>
@@ -43,7 +49,11 @@
 
 <!-- Start Content -->
 
-<p> Find rabbits in your area  </p>
+<h1> Find rabbits in your area  </h1>
+
+<p> 
+Finding a rabbit is never easy, use the interative tool below to locate available rabbits in your area. 
+  </p>
 
 <!-- Placeholder for map-->
 <div id="map"></div>
@@ -61,7 +71,7 @@
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 51.5255069, lng: -0.0836207},
-      zoom: 7
+      zoom: 6
       });
 
    var marker1=new google.maps.Marker({
@@ -91,9 +101,11 @@ marker4.setMap(map);
 var contentString1 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Velveteen</h1>'+
+      '<h1 id="Head1">Velveteen</h1>'+
       '<img src="images/Rabbit1.jpeg" alt="Velveteen" height="115" width="115">'+
-      '<p> Likes walks in parks      </p> '+
+      '<p class="para"> Likes walks in parks      </p> '+
+      '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: lop eared     </p> '+
       '</div>'+
       '</div>';
 
@@ -111,9 +123,9 @@ var infowindow1 = new google.maps.InfoWindow({
 var contentString2 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Sunny</h1>'+
+      '<h1 id="Heading2" >Sunny</h1>'+
       '<img src="images/Rabbit2.jpeg" alt="Velveteen" height="115" width="115">'+
-      '<p> Likes walks in parks      </p> '+
+      '<p id="para2"> Likes walks in parks      </p> '+
       '</div>'+
       '</div>';
 
@@ -174,6 +186,7 @@ var infowindow4 = new google.maps.InfoWindow({
 
 
 
+<p>   </p>
 
 
 <!-- End Content -->
