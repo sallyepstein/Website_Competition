@@ -10,8 +10,15 @@ border: white;
 background-color:white; 
 font-family: "Lucida Grande";
 color:black;
+
 }
 
+
+
+
+    a .hover :hover{
+        text-decoration:underline;
+    }
 
 /* Style Navbar */
 .navbar-pad-original {
@@ -48,7 +55,7 @@ h1 {
 font-family: "Lucida Grande";
 font-size:4ex;
     line-height: 150%;
-    margin:3ex;
+    margin: 5ex;
 }
 
 p {
@@ -65,17 +72,23 @@ position:center;
 /* About image styling */
 #aboutrab{
   float: right;
-  margin:0;
+  margin:25;
   width:400px;
   top:40ex;
-  border-radius:50%; 
+  border-radius:10%; 
 }
 
 /*Style Front page*/
 #OdinImBorder{
-position: relative;
- left: 0;
+  position: relative;
+  left: 0;
   top: 0;
+  height: 400px;
+  background: url('../../images/grass_alpha.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 }
 
 /*Style Front page*/
@@ -87,7 +100,7 @@ height:50ex;
   top:0ex;
     margin:auto;
   float:left;
-opacity: 0.2;
+opacity: 0.4;
 }
 
 
@@ -131,4 +144,8 @@ font-family: "Lucida Grande";
 font-size:4ex;
 margin:auto;
 
+  }
+
+  #gender {
+    margin-left: 25em;
   }
