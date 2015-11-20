@@ -130,5 +130,26 @@ padding-left: 40px;
 font-family: "Lucida Grande";
 font-size:4ex;
 margin:auto;
+}
 
-  }
+
+/* Information in maps boxes */
+.Head1{
+font-size: 4ex;
+ line-height: 100%;
+} 
+
+.rab{
+float:left;
+height:20ex;
+}
+
+.para{
+  float:right;
+font-size: 3ex;
+ line-height: 100%;
+ display:block;
+ font-family: "Lucida Grande";
+
+}
+
