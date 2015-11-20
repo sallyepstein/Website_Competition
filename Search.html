@@ -70,8 +70,8 @@ Finding a rabbit is never easy, use the interative tool below to locate availabl
     var map;
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 51.5255069, lng: -0.0836207},
-      zoom: 6
+      center: {lat: 53.5255069, lng: -2.2836207},
+      zoom: 5
       });
 
    var marker1=new google.maps.Marker({
@@ -101,76 +101,99 @@ marker4.setMap(map);
 var contentString1 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="Head1">Velveteen</h1>'+
-      '<img src="images/Rabbit1.jpeg" alt="Velveteen" height="115" width="115">'+
+      '<h1 class="Head1">Velveteen</h1>'+
+      '<img src="images/Rabbit1.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
       '<p class="para"> Likes walks in parks      </p> '+
       '<p class="para"> Sex: Female      </p> '+
       '<p class="para"> Breed: lop eared     </p> '+
       '</div>'+
       '</div>';
-
  marker1.addListener('click', function() {
+  infowindow4.close();//hide the infowindow
+   infowindow3.close();//hide the infowindow
+  infowindow2.close();//hide the infowindow
     infowindow1.open(map, marker1);
   });
-
 
 var infowindow1 = new google.maps.InfoWindow({
     content: contentString1
   });
 
 
-
 var contentString2 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="Heading2" >Sunny</h1>'+
-      '<img src="images/Rabbit2.jpeg" alt="Velveteen" height="115" width="115">'+
-      '<p id="para2"> Likes walks in parks      </p> '+
+      '<h1 class="Head1" >Sunny</h1>'+
+      '<img src="images/Rabbit2.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes walks in parks      </p> '+
       '</div>'+
       '</div>';
 
- marker2.addListener('click', function() {
+      marker2.addListener('click', function() {
+  infowindow4.close();//hide the infowindow
+  infowindow3.close();//hide the infowindow
+   infowindow1.close();//hide the infowindow
     infowindow2.open(map, marker2);
   });
- var infowindow2 = new google.maps.InfoWindow({
+
+var infowindow2 = new google.maps.InfoWindow({
     content: contentString2
   });
 
  var contentString3 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Minnie</h1>'+
-      '<img src="images/Rabbit3.jpeg" alt="Velveteen" height="115" width="115">'+
-      '<p> Likes brocolli      </p> '+
+      '<h1 class="Head1">Minnie</h1>'+
+      '<img src="images/Rabbit3.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes brocolli      </p> '+
       '</div>'+
       '</div>';
 
  marker3.addListener('click', function() {
+  infowindow4.close();//hide the infowindow
+  infowindow2.close();//hide the infowindow
+    infowindow1.close();//hide the infowindow
     infowindow3.open(map, marker3);
   });
+
 var infowindow3 = new google.maps.InfoWindow({
     content: contentString3
   });
 
+
  var contentString4 = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Suzie</h1>'+
-      '<img src="images/Rabbit4.jpeg" alt="Velveteen" height="115" width="115">'+
-      '<p> Likes rain       </p> '+
+      '<h1 class="Head1"">Suzie</h1>'+
+      '<img src="images/Rabbit4.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes rain       </p> '+
       '</div>'+
       '</div>';
 
  marker4.addListener('click', function() {
+   infowindow1.close();//hide the infowindow
+  infowindow2.close();//hide the infowindow
+  infowindow3.close();//hide the infowindow
     infowindow4.open(map, marker4);
   });
-
-
-
 
 var infowindow4 = new google.maps.InfoWindow({
     content: contentString4
   });
+
+/*var markers=[marker1,marker2,marker3,marker4];
+var infowindowcontent=[contentString1,contentString2,contentString3,contentString4];
+var infowindow = new google.maps.InfoWindow();
+
+for (var i = 0, marker;marker = markers[i]; i++) {
+  google.maps.event.addListener(marker, 'click', function(e) {
+
+    infowindow.setContent(this);
+    infowindow.open(map, this);
+  });
+}*/
+
+
 
 
 
