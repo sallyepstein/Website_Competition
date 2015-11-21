@@ -63,6 +63,19 @@ Finding a rabbit is never easy, use the interative tool below to locate availabl
 
 <!-- Javascipt for map-->
 <script type="text/javascript">
+    openwindow = 0;
+
+// close window function
+function close_window(){
+  if (openwindow ==1) {infowindow1.close();}
+  if (openwindow ==2) {infowindow2.close();}
+if (openwindow ==3) {infowindow3.close();}
+if (openwindow ==4) {infowindow4.close();}
+}
+
+
+
+
     var myCenter1={lat: 52.251512, lng: -2.336047};
     var myCenter2={lat: 52.601544, lng: 0.578077};
     var myCenter3={lat: 50.962057, lng: -2.248156};
@@ -109,13 +122,12 @@ var contentString1 = '<div id="content">'+
       '</div>'+
       '</div>';
  marker1.addListener('click', function() {
-  infowindow4.close();//hide the infowindow
-   infowindow3.close();//hide the infowindow
-  infowindow2.close();//hide the infowindow
+  close_window();
+    openwindow = 1;
     infowindow1.open(map, marker1);
   });
 
-var infowindow1 = new google.maps.InfoWindow({
+ infowindow1 = new google.maps.InfoWindow({
     content: contentString1
   });
 
@@ -125,18 +137,19 @@ var contentString2 = '<div id="content">'+
       '</div>'+
       '<h1 class="Head1" >Sunny</h1>'+
       '<img src="images/Rabbit2.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
-      '<p class="para"> Likes walks in parks      </p> '+
+      '<p class="para"> Likes hopping      </p> '+
+       '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: Fluffy     </p> '+
       '</div>'+
       '</div>';
 
       marker2.addListener('click', function() {
-  infowindow4.close();//hide the infowindow
-  infowindow3.close();//hide the infowindow
-   infowindow1.close();//hide the infowindow
+    close_window();
+    openwindow = 2;
     infowindow2.open(map, marker2);
   });
 
-var infowindow2 = new google.maps.InfoWindow({
+ infowindow2 = new google.maps.InfoWindow({
     content: contentString2
   });
 
@@ -146,17 +159,18 @@ var infowindow2 = new google.maps.InfoWindow({
       '<h1 class="Head1">Minnie</h1>'+
       '<img src="images/Rabbit3.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
       '<p class="para"> Likes brocolli      </p> '+
+       '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: Giant     </p> '+
       '</div>'+
       '</div>';
 
  marker3.addListener('click', function() {
-  infowindow4.close();//hide the infowindow
-  infowindow2.close();//hide the infowindow
-    infowindow1.close();//hide the infowindow
+    close_window();
+    openwindow = 3
     infowindow3.open(map, marker3);
   });
 
-var infowindow3 = new google.maps.InfoWindow({
+ infowindow3 = new google.maps.InfoWindow({
     content: contentString3
   });
 
@@ -167,17 +181,18 @@ var infowindow3 = new google.maps.InfoWindow({
       '<h1 class="Head1"">Suzie</h1>'+
       '<img src="images/Rabbit4.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
       '<p class="para"> Likes rain       </p> '+
+       '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: Dwarf     </p> '+
       '</div>'+
       '</div>';
 
  marker4.addListener('click', function() {
-   infowindow1.close();//hide the infowindow
-  infowindow2.close();//hide the infowindow
-  infowindow3.close();//hide the infowindow
+    close_window();
+    openwindow = 4;
     infowindow4.open(map, marker4);
   });
 
-var infowindow4 = new google.maps.InfoWindow({
+ infowindow4 = new google.maps.InfoWindow({
     content: contentString4
   });
 
@@ -216,8 +231,6 @@ for (var i = 0, marker;marker = markers[i]; i++) {
 
 
 
-
-
 <!-- start social media -->
     <div id='social-buttons'>
 
@@ -235,6 +248,10 @@ for (var i = 0, marker;marker = markers[i]; i++) {
 
     </div>
 <!-- end social media -->
+
+<div class="footer">
+Copyright &copy OdinDating
+</div>
 
 </body>
 </html>
