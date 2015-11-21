@@ -1,0 +1,143 @@
+/* CLASS FOR REMOVING PADDING IN NAVBAR*/
+
+.navbar {
+    padding:15px;
+     -webkit-transition: background .8s ease-out,padding .8s ease-out;
+        -moz-transition: background .8s ease-out,padding .8s ease-out;
+        transition: background .8s ease-out,padding .8s ease-out;
+font-size:4ex;
+border: white;
+background-color:white; 
+font-family: "Lucida Grande";
+color:black;
+}
+
+
+/* Style Navbar */
+.navbar-pad-original {
+      padding:0px;
+}
+
+/*.navbar-inverse .navbar-nav > li > a {
+color: white;
+}*/
+
+/*.navbar-inverse .navbar-brand {
+color: white;
+}*/
+
+#myNavbar{
+
+    border-top:none;
+}
+
+/* Adjust rabbit logo*/
+.navbar-brand2{
+ width:20ex;
+   position: absolute;
+    top: 5px;
+    left: -30px;
+    padding:none;
+
+}
+
+
+/*Style Text */
+
+h1 {
+font-family: "Lucida Grande";
+font-size:4ex;
+    line-height: 150%;
+    margin:3ex;
+}
+
+p {
+font-family: "Lucida Grande";
+font-size:3ex;
+    line-height: 150%;
+    margin:2ex;
+}
+
+#map{
+position:center;
+}
+
+/* About image styling */
+#aboutrab{
+  float: right;
+  margin:25;
+  width:400px;
+  top:40ex;
+  border-radius:10%; 
+}
+
+/*Style Front page*/
+#OdinImBorder{
+position: relative;
+ left: 0;
+  top: 0;
+  height:400px;
+  background: url('../../images/grass_alpha.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*Style Front page*/
+#Grass{
+width:100%;
+height:50ex;
+/*border-radius:25px;*/
+  position:relative;
+  top:0ex;
+    margin:auto;
+  float:left;
+opacity: 0.4;
+}
+
+
+/*Style Front page*/
+#OdinIm{
+	min-width:25ex;
+	min-height:25ex;
+  width:30ex;
+  height:30ex;
+	 position:absolute;
+border-radius:50%; 
+ left: 50%; 
+ margin-left: -90px;
+ top:10ex;
+   }
+
+
+/* Style social media icons */
+
+#social-buttons a{
+ position: relative;
+   margin-left:50%;
+}
+
+#social-buttons a{
+color:black;
+}
+
+
+/* Checkmark on first page*/
+ul.checkmark{
+ list-style-type: none;
+
+  }
+
+  ul.checkmark li{
+background:url('../../images/Tick.png') no-repeat 0 10%;
+background-size: 30px 30px;
+padding-left: 40px;
+font-family: "Lucida Grande";
+font-size:4ex;
+margin:auto;
+
+  }
+
+  #gender{
+margin-left:25em;
+
+  }
