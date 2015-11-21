@@ -10,15 +10,8 @@ border: white;
 background-color:white; 
 font-family: "Lucida Grande";
 color:black;
-
 }
 
-
-
-
-    a .hover :hover{
-        text-decoration:underline;
-    }
 
 /* Style Navbar */
 .navbar-pad-original {
@@ -55,7 +48,7 @@ h1 {
 font-family: "Lucida Grande";
 font-size:4ex;
     line-height: 150%;
-    margin: 5ex;
+    margin:3ex;
 }
 
 p {
@@ -72,7 +65,7 @@ position:center;
 /* About image styling */
 #aboutrab{
   float: right;
-  margin:25;
+  margin:25px;
   width:400px;
   top:40ex;
   border-radius:10%; 
@@ -80,28 +73,33 @@ position:center;
 
 /*Style Front page*/
 #OdinImBorder{
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 400px;
+position: relative;
+height:400px;
+  width: 100%;
+}
+
+#OdinImBorder:before{
+  content: ' ';
+    display:inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  opacity: 0.4;
+  height:100%;
+  width: 100%;
   background: url('../../images/grass_alpha.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-}
+z-index: -11;
+-ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
 
-}
+  }
 
-/*Style Front page*/
-#Grass{
-width:100%;
-height:50ex;
-/*border-radius:25px;*/
-  position:relative;
-  top:0ex;
-    margin:auto;
-  float:left;
-opacity: 0.4;
-}
+
 
 
 /*Style Front page*/
@@ -120,32 +118,76 @@ border-radius:50%;
 
 /* Style social media icons */
 
-#social-buttons a{
- position: relative;
-   margin-left:50%;
+#social-buttons{
+  text-align: center;
 }
 
 #social-buttons a{
-color:black;
+    display:inline-block;
+    margin-left: auto;
+    margin-top:80px;
 }
+
+
+/* Index page styling */
+.Head1{
+font-family: "Lucida Grande";
+font-size:2.5ex;
+}
+.para{
+font-family: "Lucida Grande";
+font-size:2ex;
+    line-height: 80%;
+}
+.rab{
+display:inline-block;
+  min-width:15ex;
+  min-height:15ex;
+}
+
+
 
 
 /* Checkmark on first page*/
 ul.checkmark{
  list-style-type: none;
-
+ margin-top:30px;
+text-align: center;
+padding:0;
+font-family: "Lucida Grande";
+font-size:4ex;
+white-space: pre-line;
   }
 
   ul.checkmark li{
-background:url('../../images/Tick.png') no-repeat 0 10%;
+    display: inline-block;
+background:url('../../images/Tick.png') 0 center no-repeat;
 background-size: 30px 30px;
-padding-left: 40px;
-font-family: "Lucida Grande";
-font-size:4ex;
-margin:auto;
+padding-left: 35px;
 
   }
 
-  #gender {
-    margin-left: 25em;
+/* Style Footer */
+.footer{
+   text-align: center;
+}
+
+
+/* Form on about page*/
+
+input[type="radio"] + label {
+    color: red;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+
+  #gender{
+text-align:center;
   }
+
+  #gender.btn-sm {
+  background-color : #c00;
+  color : #ccc;
+  font : "Lucida Grande";
+  border : 2px solid #ccc;
+}
