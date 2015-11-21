@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Odin Dating</title>
+<link href='dist/css/bootstrap.css' rel='stylesheet'>
+<link href='assets/css/bootstrap-social.css' rel='stylesheet'>
+<link href='assets/css/styling.css' rel='stylesheet'>
+<link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="dist/js/jquery-1.10.2.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+  html, body { height: 100%; margin: 0; padding: 0; }
+  #map { height: 400px;
+         width:100%;}
+
+
+
+</style>
+<style type="text/css">
+div#map { margin: 0 auto 0 auto; }
+</style>
+</head>
+<body>
+
+<!-- start navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><img class="navbar-brand2" src="BunnyLogo_alpha.jpg";></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href='Index.html'> Home </a></li>
+        <li><a href='About.html'> About</a></li>
+        <li><a href='Search.html'> Search</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end Navbar -->
+
+<!-- Start Content -->
+
+<h1> Find rabbits in your area  </h1>
+
+<p> 
+Finding a rabbit is never easy, use the interative tool below to locate available rabbits in your area. 
+  </p>
+
+<!-- Placeholder for map-->
+<div id="map"></div>
+
+
+
+
+<!-- Javascipt for map-->
+<script type="text/javascript">
+    openwindow = 0;
+
+// close window function
+function close_window(){
+  if (openwindow ==1) {infowindow1.close();}
+  if (openwindow ==2) {infowindow2.close();}
+if (openwindow ==3) {infowindow3.close();}
+if (openwindow ==4) {infowindow4.close();}
+}
+
+
+
+
+    var myCenter1={lat: 52.251512, lng: -2.336047};
+    var myCenter2={lat: 52.601544, lng: 0.578077};
+    var myCenter3={lat: 50.962057, lng: -2.248156};
+    var myCenter4={lat: 53.957768, lng: -1.079220};
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 53.5255069, lng: -2.2836207},
+      zoom: 5
+      });
+
+   var marker1=new google.maps.Marker({
+   position:myCenter1,
+
+   });
+
+   var marker2=new google.maps.Marker({
+   position:myCenter2,
+   });
+
+   var marker3=new google.maps.Marker({
+   position:myCenter3,
+   });
+
+   var marker4=new google.maps.Marker({
+   position:myCenter4,
+   });
+
+marker1.setMap(map);
+marker2.setMap(map);
+marker3.setMap(map);
+marker4.setMap(map);
+
+
+// Pop up window bunny 1
+var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 class="Head1">Velveteen</h1>'+
+      '<img src="images/Rabbit1.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes walks in parks      </p> '+
+      '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: lop eared     </p> '+
+      '</div>'+
+      '</div>';
+ marker1.addListener('click', function() {
+  close_window();
+    openwindow = 1;
+    infowindow1.open(map, marker1);
+  });
+
+ infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+  });
+
+
+var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 class="Head1" >Sunny</h1>'+
+      '<img src="images/Rabbit2.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes hopping      </p> '+
+       '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: Fluffy     </p> '+
+      '</div>'+
+      '</div>';
+
+      marker2.addListener('click', function() {
+    close_window();
+    openwindow = 2;
+    infowindow2.open(map, marker2);
+  });
+
+ infowindow2 = new google.maps.InfoWindow({
+    content: contentString2
+  });
+
+ var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 class="Head1">Minnie</h1>'+
+      '<img src="images/Rabbit3.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes brocolli      </p> '+
+       '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: Giant     </p> '+
+      '</div>'+
+      '</div>';
+
+ marker3.addListener('click', function() {
+    close_window();
+    openwindow = 3
+    infowindow3.open(map, marker3);
+  });
+
+ infowindow3 = new google.maps.InfoWindow({
+    content: contentString3
+  });
+
+
+ var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 class="Head1"">Suzie</h1>'+
+      '<img src="images/Rabbit4.jpeg" class="rab" alt="Velveteen" height="115" width="115">'+
+      '<p class="para"> Likes rain       </p> '+
+       '<p class="para"> Sex: Female      </p> '+
+      '<p class="para"> Breed: Dwarf     </p> '+
+      '</div>'+
+      '</div>';
+
+ marker4.addListener('click', function() {
+    close_window();
+    openwindow = 4;
+    infowindow4.open(map, marker4);
+  });
+
+ infowindow4 = new google.maps.InfoWindow({
+    content: contentString4
+  });
+
+/*var markers=[marker1,marker2,marker3,marker4];
+var infowindowcontent=[contentString1,contentString2,contentString3,contentString4];
+var infowindow = new google.maps.InfoWindow();
+
+for (var i = 0, marker;marker = markers[i]; i++) {
+  google.maps.event.addListener(marker, 'click', function(e) {
+
+    infowindow.setContent(this);
+    infowindow.open(map, this);
+  });
+}*/
+
+
+
+
+
+}
+</script>
+
+
+
+
+<!-- Call Map, keep at end-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq57Bv9kPfFIpEYHPjBWghQeYju9J7srk&callback=initMap">
+    </script>
+
+
+
+<p>   </p>
+
+
+<!-- End Content -->
+
+
+
+<!-- start social media -->
+    <div id='social-buttons'>
+
+
+    <a class="btn btn-social-icon btn-twitter btn-lg">
+    <span class="fa fa-twitter"></span>
+    </a>
+    <a class="btn btn-social-icon btn-facebook btn-lg">
+    <span class="fa fa-facebook"></span>
+    </a>
+    <a class="btn btn-social-icon btn-instagram btn-lg">
+    <span class="fa fa-instagram"></span>
+    </a>
+
+
+    </div>
+<!-- end social media -->
+
+<div class="footer">
+Copyright &copy OdinDating
+</div>
+
+</body>
+</html>

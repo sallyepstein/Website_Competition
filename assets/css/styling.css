@@ -1,0 +1,193 @@
+/* CLASS FOR REMOVING PADDING IN NAVBAR*/
+
+.navbar {
+    padding:15px;
+     -webkit-transition: background .8s ease-out,padding .8s ease-out;
+        -moz-transition: background .8s ease-out,padding .8s ease-out;
+        transition: background .8s ease-out,padding .8s ease-out;
+font-size:4ex;
+border: white;
+background-color:white; 
+font-family: "Lucida Grande";
+color:black;
+}
+
+
+/* Style Navbar */
+.navbar-pad-original {
+      padding:0px;
+}
+
+/*.navbar-inverse .navbar-nav > li > a {
+color: white;
+}*/
+
+/*.navbar-inverse .navbar-brand {
+color: white;
+}*/
+
+#myNavbar{
+
+    border-top:none;
+}
+
+/* Adjust rabbit logo*/
+.navbar-brand2{
+ width:20ex;
+   position: absolute;
+    top: 5px;
+    left: -30px;
+    padding:none;
+
+}
+
+
+/*Style Text */
+
+h1 {
+font-family: "Lucida Grande";
+font-size:4ex;
+    line-height: 150%;
+    margin:3ex;
+}
+
+p {
+font-family: "Lucida Grande";
+font-size:3ex;
+    line-height: 150%;
+    margin:2ex;
+}
+
+#map{
+position:center;
+}
+
+/* About image styling */
+#aboutrab{
+  float: right;
+  margin:25px;
+  width:400px;
+  top:40ex;
+  border-radius:10%; 
+}
+
+/*Style Front page*/
+#OdinImBorder{
+position: relative;
+height:400px;
+  width: 100%;
+}
+
+#OdinImBorder:before{
+  content: ' ';
+    display:inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  opacity: 0.4;
+  height:100%;
+  width: 100%;
+  background: url('../../images/grass_alpha.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+z-index: -11;
+-ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+  }
+
+
+
+
+/*Style Front page*/
+#OdinIm{
+	min-width:25ex;
+	min-height:25ex;
+  width:30ex;
+  height:30ex;
+	 position:absolute;
+border-radius:50%; 
+ left: 50%; 
+ margin-left: -90px;
+ top:10ex;
+   }
+
+
+/* Style social media icons */
+
+#social-buttons{
+  text-align: center;
+}
+
+#social-buttons a{
+    display:inline-block;
+    margin-left: auto;
+    margin-top:80px;
+}
+
+
+/* Index page styling */
+.Head1{
+font-family: "Lucida Grande";
+font-size:2.5ex;
+}
+.para{
+font-family: "Lucida Grande";
+font-size:2ex;
+    line-height: 80%;
+}
+.rab{
+display:inline-block;
+  min-width:15ex;
+  min-height:15ex;
+}
+
+
+
+
+/* Checkmark on first page*/
+ul.checkmark{
+ list-style-type: none;
+ margin-top:30px;
+text-align: center;
+padding:0;
+font-family: "Lucida Grande";
+font-size:4ex;
+white-space: pre-line;
+  }
+
+  ul.checkmark li{
+    display: inline-block;
+background:url('../../images/Tick.png') 0 center no-repeat;
+background-size: 30px 30px;
+padding-left: 35px;
+
+  }
+
+/* Style Footer */
+.footer{
+   text-align: center;
+}
+
+
+/* Form on about page*/
+
+input[type="radio"] + label {
+    color: red;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+
+  #gender{
+text-align:center;
+  }
+
+  #gender.btn-sm {
+  background-color : #c00;
+  color : #ccc;
+  font : "Lucida Grande";
+  border : 2px solid #ccc;
+}
