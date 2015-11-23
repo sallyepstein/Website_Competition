@@ -18,6 +18,15 @@ color:black;
       padding:0px;
 }
 
+.navbar-inverse .navbar-toggle {
+    background: #333;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background: #AAAAAA;
+}
+
+
 /*.navbar-inverse .navbar-nav > li > a {
 color: white;
 }*/
@@ -26,9 +35,13 @@ color: white;
 color: white;
 }*/
 
-#myNavbar{
 
+#myNavbar{
     border-top:none;
+}
+
+#myNavbar ul a:hover{
+    color:black;
 }
 
 /* Adjust rabbit logo*/
@@ -193,7 +206,7 @@ text-align:center;
 }
 
 body {
-    text-align: center;
+  /*  text-align: center;*/
 }
 
 .button {
